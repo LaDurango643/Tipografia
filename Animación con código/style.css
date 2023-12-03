@@ -1,0 +1,49 @@
+@keyframes delineado {
+    from {stroke: #B7B9E5;}
+    to {stroke: #4C50BD;}
+  }
+
+  @keyframes rotation{
+    from{transform: rotate(0deg);}
+    from{transform: rotate(360deg);}
+  }
+  
+body{
+    text-align:center;
+    margin-top: 0px;
+}
+.container{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#star{
+    width: 150px;
+    fill: #F9AF3C; 
+    animation: rotation 3s linear .5s infinite forwards;
+
+}
+
+#planeta{
+    width: 150px;
+    fill: #B7B9E5; 
+    transition: width 2s; /*tarda dos segundos en cambiar el ancho */
+}
+#planeta:hover{
+    width: 180px;
+}
+
+#rocket{
+    width: 150px;
+    fill: white;
+    stroke: #4C50BD;
+    stroke-width: 2px;
+    animation-name: delineado;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: forwards;
+}
